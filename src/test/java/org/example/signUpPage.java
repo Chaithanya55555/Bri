@@ -36,6 +36,7 @@ public class signUpPage {
     public void navigateToUrl(){
         driver.get("https://www.bribooks.com/signup");
         wait.until(ExpectedConditions.urlToBe("https://www.bribooks.com/signup"));
+driver.manage().window().maximize();
         Assert.assertEquals(driver.getCurrentUrl(),"https://www.bribooks.com/signup");
     }
 
