@@ -40,6 +40,7 @@ public class homePage {
     public void navigateToHomePage(){
         driver.get("https://www.bribooks.com/login?back=account/mybooks");
         wait.until(ExpectedConditions.urlToBe("https://www.bribooks.com/login?back=account/mybooks"));
+driver.manage().window().maximize();
         home.enterLogin();
         home.login();
         Assert.assertEquals(driver.getCurrentUrl(),"https://www.bribooks.com/login?back=account/mybooks");
